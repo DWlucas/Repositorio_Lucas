@@ -70,7 +70,7 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
             @Override
             public void onClick(View view) {
 
-                if (opcaoSelecionada == DIVISAO ) {
+                if(opcaoSelecionada == DIVISAO ) {
 
                 }
                 if(opcaoSelecionada == MULTIPLICACAO){
@@ -95,17 +95,17 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
         // imgvOperacao.setImageDrawable(getResources().getDrawable(R.drawable.ic_soma , getTheme());
 
 
-        if(edtOperando1.getText().toString() == DIVISAO){
+        if(adapterView.getItemAtPosition(i).toString().equals(DIVISAO)){
             imgvOperacao.setImageDrawable(getResources().getDrawable(R.drawable.ic_divisao_1 , getTheme()));
 
-        } else if(edtOperando1.getText().toString() == MULTIPLICACAO){
+        } else if(adapterView.getItemAtPosition(i).toString().equals(MULTIPLICACAO)){
             imgvOperacao.setImageDrawable(getResources().getDrawable(R.drawable.ic_multiplica , getTheme()));
 
-        } else if(edtOperando1.getText().toString() == SOMA){
+        } else if(adapterView.getItemAtPosition(i).toString().equals(SOMA)){
             imgvOperacao.setImageDrawable(getResources().getDrawable(R.drawable.ic_soma , getTheme()));
         }
 
-        else if(edtOperando1.getText().toString() == SUBTRACAO){
+        else if(adapterView.getItemAtPosition(i).toString().equals(SUBTRACAO)){
             imgvOperacao.setImageDrawable(getResources().getDrawable(R.drawable.ic_subtracao , getTheme()));
 
         } else{
@@ -117,6 +117,10 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
 
     @Override
     public void onNothingSelected(AdapterView<?> adapterView) {
+
+        private String somar(){
+            String resultado = "";
+        }
 
     }
 
