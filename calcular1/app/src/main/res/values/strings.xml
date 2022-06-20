@@ -1,12 +1,14 @@
 <resources>
     <string name="app_name">Calcular</string>
 
-    <string-array name="operacoes_matematica">
+    <string-array name="operacoes_matematicas">
         <item> </item>
         <item>Divisão</item>
         <item>Multiplicação</item>
         <item>Soma</item>
         <item>Subtração</item>
+        <item>Raiz</item>
+        <item>Potencia</item>
 
 </string-array>
 </resources>
