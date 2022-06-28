@@ -75,5 +75,6 @@ public class TrianguloFrag extends Fragment {
         });
 
         return layoutFragment;
+
     }
 }
