@@ -1,27 +1,49 @@
 package davila.lucas.uno.myapplication;
 
+import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertTrue;
+
 import org.junit.Test;
 
 import davila.lucas.uno.myapplication.forma.Retangulo;
 
 public class RetanguloTest {
-    private static Retangulo retangulo = new Retangulo();
+    private Retangulo retangulo = new Retangulo();
+    //private static final int PRECISAO_4_CASAS_DECIMAIS = 4;
 
-    RetanguloTest(){
-        retangulo.setMedida(3,2);
+    @Test
+    public void deveriaCalcularAreaDoRetangulo(){
+        double area_BasexAltura = 10;
+        double DIFERENCA_ACEITAVEL = 0.001;
+
+        retangulo.setMedida(0,5);
+        retangulo.setMedida(1,2);
+
+        double area = retangulo.getMedida(0) * retangulo.getMedida(1);
+
+        assertEquals("A area de uma de um retangulo: " + area_BasexAltura, area_BasexAltura,
+                area, DIFERENCA_ACEITAVEL);
+
+        Double calculoPapel = new Double(area_BasexAltura);
+        boolean x = calculoPapel.equals(new Double(area));
+        assertTrue(x);
     }
 
     @Test
-    public void areaEPerimetroDoRetangulo(){
-        retangulo.setMedida(3, 3);
+    public void deveriaCalcularPerimetroDoRetangulo(){
+        double perimetro_Base5Altura2  = 20;
+        int PRECISAO_4_CASAS_DECIMAIS = 4;
 
-        double base   = retangulo.getMedida(3);
-        double altura = retangulo.getMedida(3);
+        retangulo.setMedida(0, 5);
+        retangulo.setMedida(1, 2);
 
+        double perimetro = retangulo.area() * 2;
 
-        boolean x = base;
-        boolean y = altura;
-
-        assertTrue(x,y);
+        assertEquals("O perimetro de um retangulo de base 5 e altura 2 é: 20", perimetro_Base5Altura2,
+                perimetro, PRECISAO_4_CASAS_DECIMAIS);
     }
+
+
 }
+
+

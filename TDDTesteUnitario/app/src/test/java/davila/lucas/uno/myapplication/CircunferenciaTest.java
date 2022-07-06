@@ -1,7 +1,6 @@
 package davila.lucas.uno.myapplication;
 
 import org.junit.Test;
-import org.junit.experimental.theories.suppliers.TestedOn;
 import java.lang.Math;
 
 import static org.junit.Assert.*;

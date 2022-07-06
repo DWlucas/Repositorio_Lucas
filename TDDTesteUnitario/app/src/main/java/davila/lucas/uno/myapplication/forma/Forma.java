@@ -2,23 +2,27 @@ package davila.lucas.uno.myapplication.forma;
 
 //a classe abstrata possui um ou mais métodos abstratos
 public abstract class Forma {
-    private double[] numeroDeMedidas;
+    private double[] numeroDeMedida;
     private int TAMANHO_MAXIMO = 3;
 
     public Forma(int numMedidas) {
-        numeroDeMedidas = new double[numMedidas]; // aloca array de medidas
+        numeroDeMedida = new double[numMedidas]; // aloca array de medidas
+    }
+
+    public Forma() {
+
     }
 
     public double getMedida(int posicao) {
         if(posicao >=0 && posicao <= TAMANHO_MAXIMO){
-            return numeroDeMedidas[posicao];
+            return numeroDeMedida[posicao];
         } else {
             throw new RuntimeException("Número inválido para cálculo de área.");
         }
     }
 
     public void setMedida(int posicao, double medida) {
-        numeroDeMedidas[posicao] = medida;
+        numeroDeMedida[posicao] = medida;
 
     }
 

@@ -1,20 +1,26 @@
 package davila.lucas.uno.myapplication.forma;
 
 public class Triangulo extends Forma{
-    private double lado1 = 3;
-    private double lado2 = 3;
-    private double lado3 = 3;
+    private static final int TAMANHO_ARRAY_INFO_CALCULO_AREA_TRIANGULO = 3;
 
-    public Triangulo(int numMedidas) {
+    /*public Triangulo(int numMedidas) {
         super(numMedidas);
+    }*/
+
+    public Triangulo(){
+        super(TAMANHO_ARRAY_INFO_CALCULO_AREA_TRIANGULO);
     }
 
     @Override
     public double area() {
-        return 0;
-    }
+        double perimetro = getMedida(0) + getMedida(1) + getMedida(2);
 
-    //soma do lados do triangulo dividido por 2;
-    // raiz quadrada de sl
-    return sl * (sl - lado2) * (sl - lado3);
+        double semiPerimetro = perimetro / 2;
+
+        double area = semiPerimetro * (semiPerimetro - getMedida(0)) *
+                (semiPerimetro - getMedida(1)) *
+                (semiPerimetro - getMedida(2));
+
+        return Math.sqrt(area);
+    }
 }
