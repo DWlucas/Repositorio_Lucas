@@ -2,7 +2,7 @@ package davila.lucas.uno.conceitosclassesabstrataseinterfaces.formas;
 
 import static java.lang.Math.*;
 
-public class Circunferencia extends Forma { //Classe filha extends classe pai
+public class Circunferencia extends Forma { //Classe filha extends classe - pai
     public Circunferencia(double raio) {
         super(1); // uso obrigatório do construtor da superclasse
         setRaio(raio); // ajuste da medida do raio
