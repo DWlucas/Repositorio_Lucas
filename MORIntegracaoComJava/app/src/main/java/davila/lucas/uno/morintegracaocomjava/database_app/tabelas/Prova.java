@@ -5,7 +5,7 @@ import androidx.room.Entity;
 import androidx.room.Index;
 import androidx.room.PrimaryKey;
 
-@Entity(tableName = "tbl_aluno"
+@Entity(tableName = "tbl_prova"
         , indices = {@Index(value = "id", unique = true)})
 public class Prova {
 
@@ -14,6 +14,9 @@ public class Prova {
 
     private String disciplina;
 
+    public Prova(){}
+
+    //Construtor de cópia
     public Prova(Prova tblProva){
         this.id         = tblProva.getId();
         this.disciplina = tblProva.getDisciplina();

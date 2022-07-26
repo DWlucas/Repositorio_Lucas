@@ -4,9 +4,13 @@ package davila.lucas.uno.morintegracaocomjava.database_app.tabelas;
 import androidx.room.Entity;
 import androidx.room.Index;
 import androidx.room.PrimaryKey;
+import androidx.room.ForeignKey;
+import static androidx.room.ForeignKey.CASCADE;
 
-@Entity(tableName = "tbl_aluno"
-        , indices = {@Index(value = "id", unique = true)})
+@Entity(tableName = "tbl_resposta"
+        , indices = {@Index(value = {"pergunta_id"}) , @Index(value = {"id"})}
+        , foreignKeys = {@ForeignKey(entity = Pergunta.class , parentColumns = "id" ,
+        childColumns = "pergunta_id" , onUpdate = CASCADE , onDelete = CASCADE)})
 public class Resposta {
 
     @PrimaryKey(autoGenerate = true)
@@ -15,6 +19,9 @@ public class Resposta {
     private int pergunta_id;
     private String resposta;
 
+    public Resposta(){}
+
+    //Construtor de cópia
     public Resposta(Resposta tblResposta){
         this.id          = tblResposta.getId();
         this.resposta    = tblResposta.getResposta();

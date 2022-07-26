@@ -18,6 +18,7 @@ public class AlunoProva {
 
     public AlunoProva() {}
 
+    //Construtor de cópia
     public AlunoProva(AlunoProva tblAlunoProva){
         this.aluno_id = tblAlunoProva.getAluno_id();
         this.prova_id = tblAlunoProva.getProva_id();

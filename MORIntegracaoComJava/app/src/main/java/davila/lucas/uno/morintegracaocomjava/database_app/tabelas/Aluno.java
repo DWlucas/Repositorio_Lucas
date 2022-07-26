@@ -14,7 +14,7 @@ public class Aluno {
 
     private String nome, celular, email, githubUsuario;
 
-
+    public Aluno(){}
 
     //Construtor de cópia
     public Aluno(Aluno tblAluno){
@@ -28,21 +28,21 @@ public class Aluno {
 
     public int getId() { return id; }
 
-    public void setId(int id) { id = id; }
+    public void setId(int id) { this.id = id; }
 
     public String getNome() { return nome; }
 
-    public void setNome(String nome) { nome = nome; }
+    public void setNome(String nome) { this.nome = nome; }
 
     public String getCelular() { return celular; }
 
-    public void setCelular(String celular) { celular = celular; }
+    public void setCelular(String celular) { this.celular = celular; }
 
     public String getEmail() { return email; }
 
-    public void setEmail(String email) { email = email; }
+    public void setEmail(String email) { this.email = email; }
 
     public String getGithubUsuario() { return githubUsuario; }
 
-    public void setGithubUsuario(String githubUsuario) { githubUsuario = githubUsuario; }
+    public void setGithubUsuario(String githubUsuario) { this.githubUsuario = githubUsuario; }
 }
